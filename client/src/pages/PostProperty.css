@@ -1,0 +1,239 @@
+/* ============================================
+   🏠 POST PROPERTY / SELLER HUB STYLES
+   ============================================ */
+.seller-page-wrapper {
+  padding: 40px 0 80px;
+  background: var(--bg-primary, #f8fafc);
+  min-height: calc(100vh - 150px);
+}
+
+.seller-page-header {
+  margin-bottom: 32px;
+  text-align: center;
+}
+
+.seller-page-title {
+  font-family: var(--font-heading, inherit);
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: #0f172a;
+  margin-bottom: 8px;
+}
+
+.seller-page-subtitle {
+  color: #64748b;
+  font-size: 1.05rem;
+}
+
+.post-property-grid {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 32px;
+  align-items: start;
+}
+
+@media (max-width: 992px) {
+  .post-property-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.form-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  padding: 32px;
+  box-shadow: 0 4px 20px rgba(15, 23, 42, 0.04);
+}
+
+.form-section-title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #f1f5f9;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.form-grid-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.form-grid-3 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 16px;
+}
+
+@media (max-width: 640px) {
+  .form-grid-2, .form-grid-3 {
+    grid-template-columns: 1fr;
+  }
+}
+
+.amenities-selector-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+  gap: 10px;
+  margin-top: 8px;
+}
+
+.amenity-chip-btn {
+  padding: 8px 12px;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  background: #f8fafc;
+  color: #475569;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-align: center;
+}
+
+.amenity-chip-btn:hover {
+  border-color: #3b82f6;
+  color: #2563eb;
+}
+
+.amenity-chip-btn.selected {
+  background: #eff6ff;
+  border-color: #2563eb;
+  color: #2563eb;
+}
+
+.preset-images-row {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+  overflow-x: auto;
+  padding-bottom: 6px;
+}
+
+.preset-img-thumb {
+  width: 72px;
+  height: 52px;
+  border-radius: 6px;
+  object-fit: cover;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: all 0.2s ease;
+}
+
+.preset-img-thumb:hover, .preset-img-thumb.active {
+  border-color: #2563eb;
+  transform: scale(1.05);
+}
+
+.preview-sidebar {
+  position: sticky;
+  top: 100px;
+}
+
+.preview-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #334155;
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.my-listings-section {
+  margin-top: 60px;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  padding: 32px;
+}
+
+.listings-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.my-listing-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  margin-bottom: 12px;
+  background: #f8fafc;
+  transition: background 0.2s ease;
+}
+
+.my-listing-card:hover {
+  background: #ffffff;
+  border-color: #cbd5e1;
+}
+
+.my-listing-info {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.my-listing-img {
+  width: 80px;
+  height: 60px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.my-listing-details h4 {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin-bottom: 4px;
+}
+
+.my-listing-details p {
+  font-size: 0.85rem;
+  color: #64748b;
+}
+
+.seller-auth-prompt {
+  max-width: 480px;
+  margin: 60px auto;
+  text-align: center;
+  padding: 40px;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+.seller-auth-prompt h2 {
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: #0f172a;
+  margin-bottom: 12px;
+}
+
+.seller-auth-prompt p {
+  color: #64748b;
+  margin-bottom: 24px;
+}
+
+.post-success-toast {
+  background: #ecfdf5;
+  border: 1px solid #6ee7b7;
+  color: #065f46;
+  padding: 14px 20px;
+  border-radius: 10px;
+  margin-bottom: 24px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}

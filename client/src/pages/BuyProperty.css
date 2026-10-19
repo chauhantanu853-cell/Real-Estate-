@@ -1,0 +1,252 @@
+/* ============================================
+   🏠 HUMAN BUY PROPERTY PAGE STYLES
+   ============================================ */
+.buy-page-wrapper {
+  padding-top: 130px;
+  padding-bottom: 80px;
+  background: #f8fafc;
+  min-height: 100vh;
+}
+
+.buy-page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 30px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.buy-page-title {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #0f172a;
+}
+
+.buy-page-subtitle {
+  color: #64748b;
+  font-size: 0.95rem;
+}
+
+.buy-header-actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.sort-select-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #475569;
+}
+
+.sort-select {
+  padding: 8px 32px 8px 12px;
+  font-size: 0.875rem;
+  min-width: 170px;
+}
+
+.filter-toggle-btn {
+  display: none;
+}
+
+/* Layout */
+.buy-layout {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 30px;
+}
+
+/* Sidebar */
+.filter-sidebar {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 24px;
+  height: fit-content;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+}
+
+.sidebar-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.sidebar-header h3 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #0f172a;
+}
+
+.close-filter-btn {
+  display: none;
+  background: none;
+  font-size: 1.3rem;
+  color: #64748b;
+}
+
+.filter-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.filter-block label {
+  display: block;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #334155;
+  margin-bottom: 8px;
+}
+
+.bhk-options-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 6px;
+}
+
+.bhk-chip {
+  padding: 8px 0;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  background: #ffffff;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #475569;
+  transition: all 0.15s ease;
+}
+
+.bhk-chip:hover, .bhk-chip.active {
+  background: #2563eb;
+  color: #ffffff;
+  border-color: #2563eb;
+}
+
+.price-inputs-row {
+  display: flex;
+  gap: 8px;
+}
+
+.price-inputs-row input {
+  padding: 8px 10px;
+  font-size: 0.85rem;
+}
+
+.checkbox-label {
+  display: flex !important;
+  align-items: center;
+  gap: 8px;
+  font-weight: 600 !important;
+  cursor: pointer;
+}
+
+.filter-form-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.w-100 {
+  width: 100%;
+}
+
+/* Property Grid Area */
+.property-grid-area {
+  min-height: 400px;
+}
+
+.pagination-bar {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 40px;
+}
+
+.pagination-num {
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  border: 1px solid #cbd5e1;
+  background: #ffffff;
+  color: #334155;
+  font-weight: 700;
+  transition: all 0.15s ease;
+}
+
+.pagination-num:hover, .pagination-num.active {
+  background: #2563eb;
+  color: #ffffff;
+  border-color: #2563eb;
+}
+
+.empty-results-box {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.empty-icon {
+  font-size: 3rem;
+  margin-bottom: 12px;
+}
+
+.empty-results-box h3 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.empty-results-box p {
+  color: #64748b;
+  margin-bottom: 20px;
+}
+
+@media (max-width: 900px) {
+  .buy-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .filter-toggle-btn {
+    display: inline-flex;
+  }
+
+  .filter-sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 110;
+    border-radius: 0;
+    overflow-y: auto;
+    transform: translateY(100%);
+    transition: transform 0.3s ease;
+  }
+
+  .filter-sidebar.mobile-active {
+    transform: translateY(0);
+  }
+
+  .close-filter-btn {
+    display: block;
+  }
+
+  .buy-page-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+}
